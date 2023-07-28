@@ -1,0 +1,22 @@
+body{
+    background-color: rgba(32, 32, 210, 0.685);
+}
+#sectionImg1{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+    
+}
+
+@media screen and (max-width: 1000px) { /*  colocar responsividade */
+  #img1{width:50%}
+    }
+    @media screen and (max-width: 640px){
+        #img1{display: none;}
+        }
+    
+        #sectionImg2{
+            display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+        }
