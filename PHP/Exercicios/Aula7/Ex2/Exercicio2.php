@@ -6,7 +6,9 @@ $celsi = $_GET['celsi'];
 
 
 
-echo"Conversão de Farenheit para Celsius=".Mult($faren,$dif1,$val1);
+echo"Conversão de Farenheit para Celsius=".CalcFah($faren);
+
+echo"<p>Conversão de Celsius para Farenheit=".CalcCel($celsi);
 
 
 
