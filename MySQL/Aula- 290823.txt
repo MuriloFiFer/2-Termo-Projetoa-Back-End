@@ -1,0 +1,84 @@
+Comandos
+
+mysql --version   (verificar variavel de ambiente) usando xampp (Shell)
+
+mysqladmin -u root password  (trocar senha root)  (não executar em aula)
+
+mysql -u root  (acessar banco de dados)
+
+mysql -u -p (acessar banco de dados com senha)
+
+show databases;  (mostrar bancos de dados)
+
+use mysql;  (usar banco de dados)
+
+show tables; (mostrar tabelas)
+
+create database (nome do banco);  (criar banco) 
+
+show database (nome do banco)  (ver banco)
+
+drop database (nome do banco)  (excluir banco) (tomar cuidado-se possivel fazer backUp)
+
+use (nome do banco);  (entrar no banco e usar)19:55 29/08/2023
+
+create table aluno(  (enter)         (aluno = nome da tablea)
+ -->nome varchar2(30));             (criando tabela com campo "nome" varchar2(tipo do campo) tamanho 30;
+
+
+drop table aluno;  apagar tabela
+
+describe (nome da tabela);  (ver tabela)
+ou
+desc (nome da tabela);    (ver tabela)
+
+ex:create table aluno(
+->codigo int(4),
+->nome varchar(30),
+->email varchar(100),
+->primary key (codigo));   (usar ,virgula para mudar a criação do campo)
+
+
+comandos manipulação da tabela:
+
+
+
+>select * from aluno;  (selecionar todos os campos da tabela "aluno").
+
+
+
+>select nome(campo) from aluno; (selecionar campo especifico)
+
+
+
+>insert into aluno(codigo, nome, email)
+->values(1, 'joaozinho', 'joao@joao.br');   (criado na tabela aluno no codigo,nome,email os valores (1(cod), joaozinho(nome), joao@joao.br(email) ).
+
+
+
+>select * from aluno;  (seleciona *todos os campo da tabela "aluno)
+
+>select (nome do campo) from aluno;  (seleciona compo especifico)
+
+
+
+>update aluno(nome da tabela que quero atualizar) (seguir o codigo0
+>set nome='joaozinho Silva'
+->where codigo = 1;  (setando onde o codigo for 1 para joaozinho Silva)  .
+
+->delete from aluno where codigo = 1;  (deletar da tabela "aluno" onde o campo "codigo" for "1")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
