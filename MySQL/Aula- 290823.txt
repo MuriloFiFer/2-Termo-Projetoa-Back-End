@@ -10,7 +10,7 @@ mysql -u -p (acessar banco de dados com senha)
 
 show databases;  (mostrar bancos de dados)
 
-use mysql;  (usar banco de dados)
+use mysql;(nome do banco de dados)  (usar banco de dados)
 
 show tables; (mostrar tabelas)
 
@@ -66,7 +66,7 @@ comandos manipulação da tabela:
 >set nome='joaozinho Silva'
 ->where codigo = 1;  (setando onde o codigo for 1 para joaozinho Silva)  .
 
-->delete from aluno where codigo = 1;  (deletar da tabela "aluno" onde o campo "codigo" for "1")
+->delete from aluno where codigo = 1;  (deletar da tabela "aluno" onde o campo "codigo" for "1")  (não precisa do codigo update)
 
 
 
