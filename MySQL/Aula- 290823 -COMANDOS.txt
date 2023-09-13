@@ -1,4 +1,4 @@
-Comandos
+mComandos
 
 mysql --version   (verificar variavel de ambiente) usando xampp (Shell)
 
@@ -62,7 +62,7 @@ comandos manipulação da tabela:
 
 
 
->update aluno(nome da tabela que quero atualizar) (seguir o codigo0
+>update aluno(nome da tabela que quero atualizar) nome(seguir o nome da coluna)
 >set nome='joaozinho Silva'
 ->where codigo = 1;  (setando onde o codigo for 1 para joaozinho Silva)  .
 
@@ -76,7 +76,12 @@ comandos manipulação da tabela:
 
 
 
-
+ id int(4) auto_increment not null,
+    -> nome varchar(100) not null,
+    -> email varchar(250) not null,
+    -> endereco varchar(350) not null,
+    -> dataNasc date not null,
+    -> primary key (id));
 
 
 
