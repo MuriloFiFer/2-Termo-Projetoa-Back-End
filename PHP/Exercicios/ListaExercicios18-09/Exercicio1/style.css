@@ -1,0 +1,17 @@
+body{
+	background-color: lightblue;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5%;
+}
+
+#container1{
+	background-color: aliceblue;
+	width: 30%;
+	height: 20vh;
+}
+#text1{
+	margin-left: 10%;
+	margin-top: 08%;
+}
