@@ -1,0 +1,60 @@
+
+
+criando tabela "Login" no banco "aluno"
+
+configurando e criando usuarios com senha
+
+utilizando criptografia para senhas..  varchar32
+
+
+
+
+MariaDB [banco]> use aluno;
+Database changed
+MariaDB [aluno]> create table login(
+    -> userid int(4) not null auto_increment,
+    -> user varchar(250) not null,
+    -> pass varchar(32) not null,
+    -> primary key(userid));
+Query OK, 0 rows affected (0.015 sec)
+
+MariaDB [aluno]> desc login;
++--------+--------------+------+-----+---------+----------------+
+| Field  | Type         | Null | Key | Default | Extra          |
++--------+--------------+------+-----+---------+----------------+
+| userid | int(4)       | NO   | PRI | NULL    | auto_increment |
+| user   | varchar(250) | NO   |     | NULL    |                |
+| pass   | varchar(32)  | NO   |     | NULL    |                |
++--------+--------------+------+-----+---------+----------------+
+3 rows in set (0.012 sec)
+
+MariaDB [aluno]> insert into login (userid, user, pass)
+    -> values(null, 'joao', 'md5'('123'));
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '('123'))' at line 2
+MariaDB [aluno]> insert into login (userid, user, pass)
+    -> values(null, 'joao', md5('123'));
+Query OK, 1 row affected (0.005 sec)
+
+MariaDB [aluno]> select * from login;
++--------+------+----------------------------------+
+| userid | user | pass                             |
++--------+------+----------------------------------+
+|      1 | joao | 202cb962ac59075b964b07152d234b70 |
++--------+------+----------------------------------+
+1 row in set (0.000 sec)
+
+MariaDB [aluno]> insert into login (userid, user, pass)
+    -> value(null, 'maria', md5('123321'));
+Query OK, 1 row affected (0.002 sec)
+
+MariaDB [aluno]> select * from login;
++--------+-------+----------------------------------+
+| userid | user  | pass                             |
++--------+-------+----------------------------------+
+|      1 | joao  | 202cb962ac59075b964b07152d234b70 |
+|      2 | maria | c8837b23ff8aaa8a2dde915473ce0991 |
++--------+-------+----------------------------------+
+2 rows in set (0.000 sec)
+
+MariaDB [aluno]>
+
