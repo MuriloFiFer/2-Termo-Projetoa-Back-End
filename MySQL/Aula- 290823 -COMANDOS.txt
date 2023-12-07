@@ -58,7 +58,8 @@ comandos manipulação da tabela:
 
 >select * from aluno;  (seleciona *todos os campo da tabela "aluno)
 
->select (nome do campo) from aluno;  (seleciona compo especifico)
+
+select (nome do campo) from aluno;  (seleciona compo especifico)
 
 
 
